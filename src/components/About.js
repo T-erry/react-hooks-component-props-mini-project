@@ -1,11 +1,16 @@
-const About = ({about, image })=>{
-    return(
-        <aside>
-        { image === ""? "https://via.placeholder.com/215": <img src={image} alt="blog logo"/>}
-         <p>{about}</p>
-         </aside>
-        
+import React from "react";
 
-    );
+function About (props){
+  
+    return (
+    <aside>
+        {/* the || we include the default */}
+        <img src= {props.image || "https://via.placeholder.com/215"} alt="blog logo"/>
+        <p>{props.about}</p>
+
+    </aside>)
+      
+   
+    
 }
-export default About;
+export default About
